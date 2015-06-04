@@ -35,6 +35,7 @@ class ModuleTableSeeder extends Seeder {
 							"name" => Config::get('constants.CLIENT_MODULE_NAME'),
 							"path" => Config::get('constants.CLIENT_MODULE_PATH')
 						),
+						/*
 						array(
 							"name" => Config::get('constants.SALE_MODULE_NAME'),
 							"path" => Config::get('constants.SALE_MODULE_PATH')
@@ -43,6 +44,7 @@ class ModuleTableSeeder extends Seeder {
 							"name" => Config::get('constants.PURCHASE_MODULE_NAME'),
 							"path" => Config::get('constants.PURCHASE_MODULE_PATH')
 						),
+						*/
 						array(
 							"name" => Config::get('constants.DOCTOR_MODULE_NAME'),
 							"path" => Config::get('constants.DOCTOR_MODULE_PATH')
