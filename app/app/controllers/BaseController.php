@@ -102,7 +102,6 @@ class BaseController extends Controller {
 	//set data array for the constructors
 	public static function setDataArray($model)
 	{		
-		error_log("Modelo desde el controlador Base : ".$model);
 		$modelUpperCase 			= strtoupper($model);
 		$data 						= array();
 		$data['model'] 				= Config::get('constants.'.$modelUpperCase.'_MODEL_NAME');
@@ -113,7 +112,6 @@ class BaseController extends Controller {
 		$data['deletePathMethodGet']= Config::get('constants.'.$modelUpperCase.'_DELETE_PATH_METHOD_GET');
 		$data['newPathMethodPost']	= Config::get('constants.'.$modelUpperCase.'_NEW_PATH_METHOD_POST');
 		$data['editPathMethodPost']	= Config::get('constants.'.$modelUpperCase.'_EDIT_PATH_METHOD_POST');
-		error_log("Modelo Salida de	el controlador : ".$data['model']);
 		return $data;
 	}
 }

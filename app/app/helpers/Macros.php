@@ -2,10 +2,9 @@
 
 Form::macro('profiles', function($name, $label)
 {
-    //$areas  = Area::lists('area','id');
     $value  = Form::getValueAttribute($name);
 
-    $profiles     = Profile::lists('profile','id');
+    $profiles     = Profile::lists('name','id');
 
     $input  = Form::select($name , $profiles , $value , array('class'=>'form-control')); 
 

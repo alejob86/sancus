@@ -23,8 +23,8 @@ require(__DIR__ . '/routes/sales.php');
 require(__DIR__ . '/routes/caja.php');
 
 //config 
-require(__DIR__ . '/routes/config/users.php');
-require(__DIR__ . '/routes/config/profiles.php');
+require(__DIR__ . '/routes/users.php');
+require(__DIR__ . '/routes/profiles.php');
 require(__DIR__ . '/routes/config/permissions.php');
 
 

@@ -27,6 +27,7 @@ $app = new Illuminate\Foundation\Application;
 $env = $app->detectEnvironment(array(
 
 	'local' => array('alejandro-Inspiron-N5110'),
+	'local' => array('GLB-L1989'),
 
 ));
 

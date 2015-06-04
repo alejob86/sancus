@@ -6,11 +6,8 @@ class UserController extends BaseController
 
 	public function __construct()
 	{
-		$this->data['modal'] 		= 'users';
-		$this->data['ruta'] 		= 'users';
-		$this->data['model'] 		= 'User';
-		$this->data['modulo'] 		= 'Usuarios';
-		$this->data['seccion']		= '';
+		//setup data array
+		$this->data = BaseController::setDataArray(Config::get('constants.USER_MODEL_NAME'));
 
 		$this->search_by =  array('email','name','last_name');
 	}
@@ -51,5 +48,3 @@ class UserController extends BaseController
 	 	return Redirect::back();
 	}
 }
-
-?>
