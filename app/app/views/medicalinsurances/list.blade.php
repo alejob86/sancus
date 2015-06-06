@@ -6,15 +6,6 @@
 				<th>{{Lang::get('medicalinsurance.email')}}</th>
 				<th>{{Lang::get('medicalinsurance.phoneNumber')}}</th>
 				<th>{{Lang::get('medicalinsurance.cellPhoneNumber')}}</th>
-
-				<th>Cuit</th>
-				<th>Nombre/Sigla</th>
-				<th>Ubicación</th>
-				<th>cp</th>
-				<th>Tel/Fax</th>
-				<th>Mail</th>
-				<th>Cond.</th>
-				<th>Obs.</th>	
 				<th></th>
 			</tr>
 		</thead>
@@ -28,8 +19,8 @@
 					<td>{{$models->cellPhoneNumber}}</td>					
 					<td>
 						<div class="btn-group btn-group-xs">
-							<a href="{{route($editPathMethodGet,$models->id)}}" class="btn btn-default" data-toggle="modal" data-target="#myModal"><i class="glyphicon glyphicon-edit"></i></a>
-							<a href="{{route($deletePathMethodGet,$models->id)}}"type="button" class="del_confirm btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i></a>
+							<a href="{{route($editPathMethodGet,$models->id)}}" class="btn btn-default" data-toggle="modal" data-target="#myModal"><i class="fa fa-pencil"></i></a>
+							<a href="{{route($deletePathMethodGet,$models->id)}}"type="button" class="del_confirm btn btn-danger"><i class="fa fa-remove"></i></a>
 						</div>
 					</td>
 				</tr>

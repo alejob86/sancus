@@ -22,5 +22,6 @@ return array(
 	'company' 	=> 'Company',
 	'phoneNumber' 	=> 'Phone number',	
 	'cellPhoneNumber' 	=> 'Cell phone number',
+	'medicalInsurance'	=> 'Medical Insurance',
 
 );

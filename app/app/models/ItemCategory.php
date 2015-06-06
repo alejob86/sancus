@@ -8,5 +8,3 @@ class ItemCategory extends Eloquent
 	protected $guarded = array("");
 
 }
-
-?>

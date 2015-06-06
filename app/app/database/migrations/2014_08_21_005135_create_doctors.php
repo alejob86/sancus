@@ -21,7 +21,8 @@ class CreateDoctors extends Migration {
 		   $newtable->string('email', 100);
 		   $newtable->string('phone', 100);
 		   $newtable->string('cell_phone', 100);
-		   $newtable->string('license', 40);
+		   $newtable->string('national_license', 40);
+		   $newtable->string('provincial_license', 40);
 		   $newtable->timestamps();
 		   $newtable->softDeletes();
         });

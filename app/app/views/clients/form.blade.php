@@ -7,3 +7,4 @@
 {{Form::texto('cell_phone', Lang::get('client.cellPhoneNumber'))}}
 {{Form::texto('company_name', 	Lang::get('client.company'))}}
 {{Form::texto('cuit', 			Lang::get('client.cuit'))}}
+{{Form::medicalinsurance('medicalinsurance_id', Lang::get("client.medicalInsurance"))}}

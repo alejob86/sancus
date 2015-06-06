@@ -20,6 +20,8 @@ return array(
 	'email'		=> 'Email',
 	'phoneNumber' 		=> 'Phone number',	
 	'cellPhoneNumber' 	=> 'Cell phone number',
-	'license'			=> 'License',
+	'nationalLicense'	=> 'National License',
+	'provincialLicense'	=> 'Provincial License',
+	'medicalinsurances'	=> 'Medical Insurances',
 
 );

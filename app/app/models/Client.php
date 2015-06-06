@@ -23,6 +23,11 @@ class Client extends Eloquent
 		return $this->hasMany('ClientsPayment');
 	}
 
+	public function medicalinsurance()
+	{
+		return $this->hasOne('Medicalinsurance');
+	}
+
 }
 
 ?>

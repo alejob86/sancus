@@ -1,5 +1,73 @@
 <?php
 
+Form::macro('medicalinsurances', function()
+{
+    // Retrieves the id from the model when it comes from the edit side
+    $id     = Form::getValueAttribute('id');
+
+    $var    = '<div style="max-height: 200px;  overflow-y: scroll;" >
+        
+                <ul class="list-group">';
+    
+                foreach(Medicalinsurance::orderBy('name','ASC')->get() as $medicalinsurance)
+                {
+                    if(!empty($id) && $doctorsmedicalinsurances = DoctorMedicalinsurance::where('doctor_id','=',$id)->where('medicalinsurance_id','=',$medicalinsurance->id)->first())
+                    {
+                       $checked = "checked";
+                    }else{
+                       $checked = "";
+                    }
+                    
+                    $var .= '<li class="list-group-item">
+                                <input type="checkbox" name="chk_medicalinsurance[]" value="'.$medicalinsurance->id.'"'.$checked.'>'.$medicalinsurance->name.
+                            '</li>'; 
+                }                                        
+        
+    $var    .= '</ul></div>';
+
+    return $var; 
+
+});
+
+Form::macro('categories', function()
+{        
+    // Retrieves the id from the model when it comes from the edit side
+    $id     = Form::getValueAttribute('id');
+            
+    $var    = '<div style="max-height: 200px;  overflow-y: scroll;" >
+        
+                <ul class="list-group">';
+    
+                foreach(Category::orderBy('name','ASC')->get() as $category)
+                {
+                    if(!empty($id) && $itemscategories = ItemCategory::where('item_id','=',$id)->where('category_id','=',$category->id)->first())
+                    {
+                       $checked = "checked";
+                    }else{
+                       $checked = "";
+                    }
+                    
+                    $var .= '<li class="list-group-item">
+                                <input type="checkbox" name="chk_category[]" value="'.$category->id.'"'.$checked.'>'.$category->name.
+                            '</li>'; 
+                }                                        
+        
+    $var    .= '</ul></div>';
+
+    return $var;        
+});
+
+Form::macro('medicalinsurance', function($field, $label)
+{
+    $value  = Form::getValueAttribute($field);
+
+    $medicalinsurances = Medicalinsurance::lists('name','id');
+
+    $input  = Form::select($field, $medicalinsurances, $value, array('class'=>'form-control'));
+
+    return buildInput($input,$label);
+});
+
 Form::macro('profiles', function($name, $label)
 {
     $value  = Form::getValueAttribute($name);

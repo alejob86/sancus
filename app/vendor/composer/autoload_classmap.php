@@ -37,7 +37,7 @@ return array(
     'CreateItems' => $baseDir . '/app/database/migrations/2014_08_21_005127_create_items.php',
     'CreateItemsCategories' => $baseDir . '/app/database/migrations/2014_08_21_062510_create_items_categories.php',
     'CreateMeasurementunits' => $baseDir . '/app/database/migrations/2014_08_21_005124_create_measurementunits.php',
-    'CreateMedicalinsurances' => $baseDir . '/app/database/migrations/2014_08_21_005136_create_medicalinsurances.php',
+    'CreateMedicalinsurances' => $baseDir . '/app/database/migrations/2014_08_21_005123_create_medicalinsurances.php',
     'CreateModules' => $baseDir . '/app/database/migrations/2014_08_21_022118_create_modules.php',
     'CreatePermissions' => $baseDir . '/app/database/migrations/2014_08_22_235709_create_permissions.php',
     'CreateProfiles' => $baseDir . '/app/database/migrations/2014_08_20_233814_create_profiles.php',
