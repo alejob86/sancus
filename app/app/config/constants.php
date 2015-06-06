@@ -155,4 +155,17 @@ return [
 
     'MEASUREMENTUNIT_NEW_PATH_METHOD_POST'     => 'measurementunits_new_post',
     'MEASUREMENTUNIT_EDIT_PATH_METHOD_POST'    => 'measurementunits_edit_post',
+
+    //Medical Insurance Plan Constants
+    'MEDICALINSURANCEPLAN_MODULE_NAME' => 'medicalinsurancesplans',
+    'MEDICALINSURANCEPLAN_MODULE_PATH' => 'medicalinsurancesplans',
+    'MEDICALINSURANCEPLAN_MODEL_NAME'  => 'Medicalinsuranceplan',
+
+    'MEDICALINSURANCEPLAN_MODEL_NAME_UPPER_CASE'    => 'MEDICALINSURANCEPLAN',
+    'MEDICALINSURANCEPLAN_NEW_PATH_METHOD_GET'      => 'medicalinsurancesplans_new',
+    'MEDICALINSURANCEPLAN_EDIT_PATH_METHOD_GET'     => 'medicalinsurancesplans_edit',
+    'MEDICALINSURANCEPLAN_DELETE_PATH_METHOD_GET'   => 'medicalinsurancesplans_delete',
+
+    'MEDICALINSURANCEPLAN_NEW_PATH_METHOD_POST'     => 'medicalinsurancesplans_new_post',
+    'MEDICALINSURANCEPLAN_EDIT_PATH_METHOD_POST'    => 'medicalinsurancesplans_edit_post',
 ];
