@@ -21,8 +21,9 @@ return array(
 	'clients' => 'clientes',
 	'sales' => 'ventas',
 	'purchases' => 'compras',
-	'doctors' => 'Medicos',
+	'doctors' => 'medicos',
 	'medicalinsurances' => 'obras sociales',
+	'medicalinsurancesplans' => 'planes de obras sociales',
 	'measurementunits' => 'unidades de medida',
 
 );

@@ -29,34 +29,6 @@ Form::macro('medicalinsurances', function()
 
 });
 
-Form::macro('categories', function()
-{        
-    // Retrieves the id from the model when it comes from the edit side
-    $id     = Form::getValueAttribute('id');
-            
-    $var    = '<div style="max-height: 200px;  overflow-y: scroll;" >
-        
-                <ul class="list-group">';
-    
-                foreach(Category::orderBy('name','ASC')->get() as $category)
-                {
-                    if(!empty($id) && $itemscategories = ItemCategory::where('item_id','=',$id)->where('category_id','=',$category->id)->first())
-                    {
-                       $checked = "checked";
-                    }else{
-                       $checked = "";
-                    }
-                    
-                    $var .= '<li class="list-group-item">
-                                <input type="checkbox" name="chk_category[]" value="'.$category->id.'"'.$checked.'>'.$category->name.
-                            '</li>'; 
-                }                                        
-        
-    $var    .= '</ul></div>';
-
-    return $var;        
-});
-
 Form::macro('medicalinsurance', function($field, $label)
 {
     $value  = Form::getValueAttribute($field);

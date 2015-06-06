@@ -10,4 +10,9 @@ class Medicalinsurance extends Eloquent
 	{
 		return $this->belongsToMany('Doctor', 'doctors_medicalinsurances', 'doctor_id', 'medicalinsurance_id');
 	}
+
+	public function medicalinsurancesplans()
+	{
+		return $this->hasMany('Medicalinsurancesplan');
+	}
 }
