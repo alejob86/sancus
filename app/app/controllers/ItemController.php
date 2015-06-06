@@ -25,25 +25,25 @@ class ItemController extends BaseController
 		//Store categories
 		$categories = Input::has('chk_category') ? Input::get('chk_category') : array();
 		
-		//Image
-		$image 		= $input['image'];
+		// Create the objet
+		$item 		= new Item();
+
+		// Input Image
+		if(isset($input['image']))
+		{
+			$up 			= Upload::up($input['image'] , $this->img_path);
+			$item->image 	= $up;
+		}
 		
 		//Clear the input
 		unset($input['chk_category']);
 		unset($input['image']);
 
-		// Create the objet
-		$item 		= new Item($input);
+		$item->fill($input);		
 		$item->save();
+
 		// Input Categories
 		$item->category()->sync($categories);
-
-		// Input Image
-		if(isset($input['image']))
-		{
-			$up 	= Upload::up($input['image'] , $this->img_path);
-			$up 	= $this->img_path.$up;
-		}
 				
 		// Save the object
 		$item->save();
